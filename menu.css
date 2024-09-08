@@ -1,0 +1,44 @@
+body {
+  margin: 16px 8px 8px;
+  width: 160px;
+}
+h3 {
+  color: #939da3;
+  font-size: 11px;
+  font-weight: normal;
+  margin: 0 8px 6px;
+  text-transform: uppercase;
+}
+.btn {
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  border-radius: 3px;
+  cursor: default;
+  line-height: 24px;
+  padding: 0 8px 0 32px;
+}
+.btn:hover,
+.btn:active {
+  background-color: #f2f2f2;
+}
+.btn-working {
+  background: url(assets/status-working.svg) no-repeat 8px 4px;
+}
+.btn-working.selected {
+  background-image: url(assets/status-working.svg), url(assets/selected.svg);
+}
+.btn-needhelp {
+  background: url(assets/status-needhelp.svg) no-repeat 8px 4px;
+}
+.btn-needhelp.selected {
+  background-image: url(assets/status-needhelp.svg), url(assets/selected.svg);
+}
+.btn-done {
+  background: url(assets/status-done.svg) no-repeat 8px 4px;
+}
+.btn-done.selected {
+  background-image: url(assets/status-done.svg), url(assets/selected.svg);
+}
+.selected {
+  background-position: 8px 4px, calc(100% - 8px) 8px;
+}

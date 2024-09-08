@@ -1,0 +1,60 @@
+{
+  "name": "Classroom",
+  "description": "Lightspeed Systems - Classroom Management",
+  "version": "4.1.0.1725617917",
+  "options_page": "options.html",
+  "icons": {
+    "16": "assets/icon-classroom-16.png",
+    "48": "assets/icon-classroom-48.png",
+    "128": "assets/icon-classroom-128.png"
+  },
+  "background": {
+    "scripts": [
+      "index.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "menu.html",
+    "default_title": "Classroom Status",
+    "default_icon": {
+      "16": "assets/browseraction-working.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "cs.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "*.png",
+    "cs.js",
+    "console.html"
+  ],
+  "permissions": [
+    "background",
+    "bookmarks",
+    "desktopCapture",
+    "storage",
+    "identity",
+    "identity.email",
+    "tabCapture",
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "<all_urls>",
+    "idle",
+    "notifications",
+    "webRequest",
+    "enterprise.deviceAttributes"
+  ],
+  "content_security_policy": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+  "manifest_version": 2,
+  "update_url": "https://lsrelay-extensions-production.s3.amazonaws.com/classroom/2c756ffde94deb977f4b5cdfa62950c543c473be90a0f374bcf01fd55a326744/Classroom.xml"
+}
